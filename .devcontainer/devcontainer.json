@@ -1,18 +1,18 @@
 {
 	"image": "ghcr.io/rocker-org/devcontainer/r-ver:4.2",
 	"features": {
-		"ghcr.io/devcontainers/features/docker-outside-of-docker:1": {},
 		"ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
 			"packages": "make,gcc,g++"
 		},
-		"ghcr.io/devcontainers/features/node:1": {},
 		"ghcr.io/rocker-org/devcontainer-features/r-packages:1": {
 			"additionalRepositories": "rhub = 'https://r-hub.r-universe.dev', jeroen = 'https://jeroen.r-universe.dev'",
-			"packages": "dplyr,tidyr,readr,lubridate,BiocManager,biomaRt,Seurat,patchwork,scRepertoire,Bioconductor,ChAMP,minfi,methylationArrayAnalysis,wateRmelon,IRkernel,abind,affxparser,affy,affycoretools,affyio,affyPLM,annotate,AnnotationDbi,AnnotationFilter,AnnotationForge,ape,aplot,arrow,askpass,assertthat,AUCell,backports,base,base64enc,beachmat,BH,Biobase,BiocFileCache,BiocGenerics,BiocIO,BiocNeighbors,BiocParallel,BiocSingular,BiocVersion,biovizBase,bit,bit64,bitops,blob,boot,brew,brio,broom,broom.helpers,BSgenome,bslib,bsseq,cachem,callr,Category,caTools,cellranger,checkmate,class,cli,clipr,CLL,cluster,codetools,colorspace,commonmark,compiler,conflicted,cowplot,cpp11,crayon,credentials,crosstalk,ctv,curl"
+			"packages": "dplyr,tidyr,readr,lubridate,BiocManager,biomaRt,Seurat,patchwork,scRepertoire,ChAMP,minfi,methylationArrayAnalysis,wateRmelon,IRkernel,abind,affxparser,affy,affycoretools,affyio,affyPLM,annotate,GenomicFeatures,AnnotationDbi,AnnotationFilter,AnnotationForge,ape,aplot,arrow,askpass,assertthat,AUCell,backports,base,base64enc,beachmat,BH,Biobase,BiocFileCache,BiocGenerics,BiocIO,BiocNeighbors,BiocParallel,BiocSingular,BiocVersion,biovizBase,bit,bit64,bitops,blob,boot,brew,brio,broom,broom.helpers,BSgenome,bslib,bsseq,cachem,callr,Category,caTools,cellranger,checkmate,class,cli,clipr,CLL,colorspace,compiler,conflicted,cowplot,cpp11,crosstalk,ctv"
 		},
+		"ghcr.io/devcontainers/features/node:1": {},
 		"ghcr.io/devcontainers/features/python:1": {
 			"installJupyterlab": true
-		}
+		},
+		"ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
 	},
 	"remoteEnv": {
 		"LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}"
