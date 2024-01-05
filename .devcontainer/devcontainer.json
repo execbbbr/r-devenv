@@ -1,23 +1,25 @@
 {
-	"image": "ghcr.io/rocker-org/devcontainer/r-ver:4.2",
+	"image": "ghcr.io/rocker-org/devcontainer/r-ver:4.3",
 	"features": {
 		"ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
-			"packages": "make,gcc,g++"
+			"packages": "make,gcc,g++,liblzma-dev,xz-utils,libbz2-dev,openssl,libcurl4-openssl-dev"
 		},
 		"ghcr.io/rocker-org/devcontainer-features/r-packages:1": {
 			"additionalRepositories": "rhub = 'https://r-hub.r-universe.dev', jeroen = 'https://jeroen.r-universe.dev'",
-			"packages": "dplyr,tidyr,readr,lubridate,BiocManager,biomaRt,Seurat,patchwork,scRepertoire,ChAMP,minfi,methylationArrayAnalysis,wateRmelon,IRkernel,abind,affxparser,affy,affycoretools,affyio,affyPLM,annotate,AnnotationDbi,AnnotationFilter,AnnotationForge,ape,aplot,arrow,assertthat,AUCell,base,beachmat,BH,Biobase,BiocFileCache,BiocGenerics,BiocIO,BiocNeighbors,BiocParallel,BiocSingular,BiocVersion,biovizBase,bit,bit64,bitops,blob,broom,broom.helpers,BSgenome,bsseq,Category,caTools,cellranger,checkmate,CLL,colorspace,compiler,conflicted,cowplot,cpp11,crosstalk,ctv"
+			"packages": "IRkernel,dplyr,tidyr,readr,lubridate,BiocManager,biomaRt,Seurat,patchwork,scRepertoire,ChAMP,minfi,methylationArrayAnalysis,wateRmelon,abind,affxparser,affy,affycoretools,affyio,affyPLM,annotate,GenomicFeatures,AnnotationDbi,AnnotationFilter,AnnotationForge,ape,aplot,arrow,askpass,assertthat,AUCell,backports,base,base64enc,beachmat,BH,Biobase,BiocFileCache,BiocGenerics,BiocIO,BiocNeighbors,BiocParallel,BiocSingular,BiocVersion,biovizBase,bit,bit64,bitops,blob,boot,brew,brio,broom,broom.helpers,BSgenome,bslib,bsseq,cachem,callr,Category,caTools,cellranger,checkmate,class,cli,clipr,CLL,colorspace,compiler,conflicted,cowplot,cpp11,crosstalk,ctv"
 		},
 		"ghcr.io/devcontainers/features/docker-outside-of-docker:1": {},
 		"ghcr.io/devcontainers/features/node:1": {},
 		"ghcr.io/devcontainers/features/python:1": {
 			"installJupyterlab": true
-		}
+		},
+		"ghcr.io/devcontainers/features/docker-outside-of-docker:1": {},
+		"ghcr.io/devcontainers/features/node:1": {}
 	},
 	"remoteEnv": {
 		"LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}"
 	},
-	"postCreateCommand": "npm install -g @devcontainers/cli && R -e \"IRkernel::installspec()\"",
+	"postCreateCommand": "npm install -g @devcontainers/cli &&  && R -e \"IRkernel::installspec()\"",
 	"customizations": {
 		"vscode": {
 			"extensions": [
